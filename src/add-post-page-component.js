@@ -1,3 +1,4 @@
+// рендер страницы добавления поста
 export function renderAddPostPageComponent({ appEl, onAddPostClick }) {
   const render = () => {
     // @TODO: Реализовать страницу добавления поста
@@ -11,10 +12,10 @@ export function renderAddPostPageComponent({ appEl, onAddPostClick }) {
 
     appEl.innerHTML = appHtml;
 
-    document.getElementById("add-button").addEventListener("click", () => {
+    document.getElementById('add-button').addEventListener('click', () => {
       onAddPostClick({
-        description: "Описание картинки",
-        imageUrl: "https://image.png",
+        description: 'Описание картинки',
+        imageUrl: 'https://image.png',
       });
     });
   };
