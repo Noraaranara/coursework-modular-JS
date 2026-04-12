@@ -24,7 +24,7 @@ export default [
       'prettier/prettier': [
         'error',
         {
-          tabWidth: 2,
+          tabWidth: 4,
           semi: true,
           singleQuote: true,
           endOfLine: 'lf',

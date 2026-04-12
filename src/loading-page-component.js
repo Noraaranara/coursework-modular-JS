@@ -10,11 +10,11 @@ import { renderHeaderComponent } from './header-component.js';
  * @param {Function} params.goToPage - Функция для навигации по страницам.
  */
 export function renderLoadingPageComponent({ appEl, user, goToPage }) {
-  /**
-   * HTML-разметка страницы загрузки.
-   * Содержит контейнер заголовка и индикатор загрузки.
-   */
-  const appHtml = `
+    /**
+     * HTML-разметка страницы загрузки.
+     * Содержит контейнер заголовка и индикатор загрузки.
+     */
+    const appHtml = `
               <div class="page-container">
                 <div class="header-container"></div>
                 <div class="loading-page">
@@ -22,16 +22,16 @@ export function renderLoadingPageComponent({ appEl, user, goToPage }) {
                 </div>
               </div>`;
 
-  // Устанавливаем разметку в корневой элемент приложения
-  appEl.innerHTML = appHtml;
+    // Устанавливаем разметку в корневой элемент приложения
+    appEl.innerHTML = appHtml;
 
-  /**
-   * Рендеринг заголовка с использованием компонента `renderHeaderComponent`.
-   * Передаются данные пользователя и функция навигации.
-   */
-  renderHeaderComponent({
-    user,
-    element: document.querySelector('.header-container'),
-    goToPage,
-  });
+    /**
+     * Рендеринг заголовка с использованием компонента `renderHeaderComponent`.
+     * Передаются данные пользователя и функция навигации.
+     */
+    renderHeaderComponent({
+        user,
+        element: document.querySelector('.header-container'),
+        goToPage,
+    });
 }
