@@ -265,6 +265,14 @@ strong {
   cursor: pointer;
 }
 
+.like-button img {
+  transition: transform 0.2s ease;
+}
+
+.like-button.liked img {
+  transform: scale(1.3);
+}
+
 .user-name {
   font-weight: 500;
 }

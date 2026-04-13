@@ -31,3 +31,7 @@ export function uploadImage({ file }) {
             return data.fileUrl;
         });
 }
+
+export const sanitize = (input) => {
+    return input.replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+};
