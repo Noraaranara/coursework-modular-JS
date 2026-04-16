@@ -2,7 +2,7 @@ import { USER_POSTS_PAGE } from './routes.js';
 import { renderHeaderComponent } from './header-component.js';
 import { formatDistanceToNow } from 'date-fns/formatDistanceToNow';
 import { ru } from 'date-fns/locale/ru';
-import { goToPage, posts, user } from './goToPage.js';
+import { goToPage, posts } from './goToPage.js';
 import likeActive from './assets/images/like-active.svg';
 import likeNotActive from './assets/images/like-not-active.svg';
 import { dislikePost, likePost } from './api.js';
@@ -27,16 +27,6 @@ export function renderPostsPageComponent() {
               <div class="post-header" data-user-id="${post.user.id}">
                   <img src="${post.user.imageUrl}" class="post-header__user-image">
                   <p class="post-header__user-name">${post.user.name}</p>
-              </div>
-              <div>
-              ${
-                  post.user.id === user.id
-                      ? `
-                  <button class="edit-button" data-post-id="${post.id}">Редактировать</button>
-                  <button class="delete-button" data-post-id="${post.id}">Удалить</button>
-                  `
-                      : ''
-              }
               </div>
               <div class="post-image-container">
                 <img class="post-image" src="${post.imageUrl}">
