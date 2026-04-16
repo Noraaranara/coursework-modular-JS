@@ -59,7 +59,6 @@ export function dislikePost({ id }) {
     }).then((response) => response.json());
 }
 
-// добавляет пост, принимает токен, описание и url картинки, возвращает добавленный пост
 export function addPost({ description, imageUrl }) {
     return fetch(postsHost, {
         method: 'POST',
@@ -80,7 +79,6 @@ export function addPost({ description, imageUrl }) {
     });
 }
 
-// регистрирует пользователя, принимает логин, пароль, имя и url картинки, возвращает токен
 export function registerUser({ login, password, name, imageUrl }) {
     return fetch(baseHost + '/api/user', {
         method: 'POST',
@@ -98,7 +96,6 @@ export function registerUser({ login, password, name, imageUrl }) {
     });
 }
 
-// заходит в аккаунт пользователя, принимает логин, пароль, возвращает токен
 export function loginUser({ login, password }) {
     return fetch(baseHost + '/api/user/login', {
         method: 'POST',
@@ -114,7 +111,6 @@ export function loginUser({ login, password }) {
     });
 }
 
-// Загружает картинку в облако, возвращает url загруженной картинки
 export function uploadImage({ file }) {
     const data = new FormData();
     data.append('file', file);
